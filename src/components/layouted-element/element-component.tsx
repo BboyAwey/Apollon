@@ -90,6 +90,8 @@ export class ElementComponent extends Component<Props> {
                   strokeOpacity="0.2"
                   strokeWidth={strokeWidth}
                   pointerEvents="none"
+                  rx={10}
+                  ry={10}
                 />
               )}
             </Svg>

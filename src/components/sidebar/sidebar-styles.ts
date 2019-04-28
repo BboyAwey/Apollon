@@ -9,6 +9,8 @@ export const Container = styled.aside`
   overflow: auto;
   display: flex;
   flex-direction: column;
+  border: 1px solid ${props => props.theme.color.gray500};
+  margin-right: 10px;
 `;
 
 export const Preview = styled.div`

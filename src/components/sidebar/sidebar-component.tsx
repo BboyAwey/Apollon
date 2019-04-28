@@ -158,7 +158,7 @@ class SidebarComponent extends Component<Props, State> {
     if (this.props.readonly || this.props.mode === ApollonMode.Assessment) return null;
     return (
       <Container>
-        {this.props.mode === ApollonMode.Exporting && (
+        {/* {this.props.mode === ApollonMode.Exporting && (
           <Switch value={this.props.view} onChange={this.changeView} color="primary">
             <Switch.Item value={ApollonView.Modelling}>{this.props.translate('views.modelling')}</Switch.Item>
             <Switch.Item value={ApollonView.Exporting}>{this.props.translate('views.exporting')}</Switch.Item>
@@ -166,14 +166,14 @@ class SidebarComponent extends Component<Props, State> {
         )}
         {this.props.view === ApollonView.Modelling ? (
           <CanvasProvider value={null}>
-            {this.state.previews.map((element, index) => (
-              <Draggable key={index} onDrop={this.onDrop(element)}>
-                <Preview>
-                  <ElementComponent element={element} />
-                </Preview>
-              </Draggable>
-            ))}
-          </CanvasProvider>
+          {this.state.previews.map((element, index) => (
+            <Draggable key={index} onDrop={this.onDrop(element)}>
+              <Preview>
+                <ElementComponent element={element} />
+              </Preview>
+            </Draggable>
+          ))}
+        </CanvasProvider>
         ) : (
           <label htmlFor="toggleInteractiveElementsMode">
             <input
@@ -184,7 +184,16 @@ class SidebarComponent extends Component<Props, State> {
             />
             {this.props.translate('views.highlight')}
           </label>
-        )}
+        )} */}
+        <CanvasProvider value={null}>
+          {this.state.previews.map((element, index) => (
+            <Draggable key={index} onDrop={this.onDrop(element)}>
+              <Preview>
+                <ElementComponent element={element} />
+              </Preview>
+            </Draggable>
+          ))}
+        </CanvasProvider>
       </Container>
     );
   }

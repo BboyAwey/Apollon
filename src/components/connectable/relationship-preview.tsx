@@ -34,7 +34,7 @@ class RelationshipPreviewComponent extends Component<Props, State> {
       .map(p => this.props.coordinateSystem.pointToScreen(p.x, p.y))
       .map(p => `${p.x} ${p.y}`)
       .join(', ');
-    return <polyline points={points} pointerEvents="none" fill="none" stroke="black" strokeWidth="1" strokeDasharray="5,5" />;
+    return <polyline points={points} pointerEvents="none" fill="none" stroke="#ff6633" strokeWidth="1" strokeDasharray="5,5" />;
   }
 
   private onPointerMove = (event: PointerEvent) => {

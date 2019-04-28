@@ -15,9 +15,9 @@ const Arrow: SFC<{ id: string } & SVGProps<SVGPathElement>> = ({ id, ...props })
       markerUnits="strokeWidth"
       strokeDasharray="1,0"
     >
-      <path d="M0,29 L30,15 L0,1" fill="none" stroke="black" />
+      <path d="M0,29 L30,15 L0,1" fill="none" stroke="#ff6633" />
     </marker>
-    <path {...props} stroke="black" strokeDasharray={7} markerEnd={`url(#marker-${id})`} />
+    <path {...props} stroke="#ff6633" strokeDasharray={7} markerEnd={`url(#marker-${id})`} />
   </g>
 );
 

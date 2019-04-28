@@ -7,7 +7,7 @@ export const ActivityFinalNodeComponent: SFC<Props> = ({ element }) => (
       cx="50%"
       cy="50%"
       r={Math.min(element.bounds.width, element.bounds.height) / 2 - 2.5}
-      stroke="black"
+      stroke="#ff6633"
       strokeWidth="5"
     />
     <circle

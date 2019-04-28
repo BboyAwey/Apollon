@@ -26,7 +26,7 @@ export const defaults = {
   },
   font: {
     color: '#212529',
-    family: 'Helvetica Neue, Helvetica, Arial, sans-serif',
+    family: 'Helvetica Neue, Helvetica, Arial, sans-serif, Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif',
     size: 16,
   },
 };

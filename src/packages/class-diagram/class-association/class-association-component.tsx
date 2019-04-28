@@ -18,17 +18,17 @@ const Marker = {
       markerUnits="strokeWidth"
       strokeDasharray="1,0"
     >
-      <path d="M0,29 L30,15 L0,1" fill="none" stroke="black" />
+      <path d="M0,29 L30,15 L0,1" fill="none" stroke="#607d8b" />
     </marker>
   ),
   Rhombus: (id: string) => (
     <marker id={id} viewBox="0 0 30 30" markerWidth="30" markerHeight="30" refX="30" refY="15" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,15 L15,22 L30,15 L15,8 z" fill="white" stroke="black" />
+      <path d="M0,15 L15,22 L30,15 L15,8 z" fill="white" stroke="#607d8b" />
     </marker>
   ),
   RhombusFilled: (id: string) => (
     <marker id={id} viewBox="0 0 30 30" markerWidth="30" markerHeight="30" refX="30" refY="15" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,15 L15,22 L30,15 L15,8 z" fill="black" />
+      <path d="M0,15 L15,22 L30,15 L15,8 z" fill="#607d8b" />
     </marker>
   ),
   Triangle: (id: string) => (
@@ -43,7 +43,7 @@ const Marker = {
       markerUnits="strokeWidth"
       strokeDasharray="1,0"
     >
-      <path d="M0,1 L0,29 L30,15 z" fill="white" stroke="black" />
+      <path d="M0,1 L0,29 L30,15 z" fill="white" stroke="#607d8b" />
     </marker>
   ),
 };
@@ -114,7 +114,7 @@ export const ClassAssociationComponent: SFC<Props> = ({ element }) => {
       {marker && marker(id)}
       <polyline
         points={element.path.map(point => `${point.x} ${point.y}`).join(',')}
-        stroke="black"
+        stroke="#607d8b"
         fill="none"
         strokeWidth={1}
         markerEnd={`url(#${id})`}

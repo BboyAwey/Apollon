@@ -73,7 +73,7 @@ export const CommunicationLinkComponent: SFC<Props> = ({ element }) => {
           </text>
         </>
       )}
-      <polyline points={element.path.map(point => `${point.x} ${point.y}`).join(',')} stroke="black" fill="none" strokeWidth={1} />
+      <polyline points={element.path.map(point => `${point.x} ${point.y}`).join(',')} stroke="#ff6633" fill="none" strokeWidth={1} />
     </g>
   );
 };

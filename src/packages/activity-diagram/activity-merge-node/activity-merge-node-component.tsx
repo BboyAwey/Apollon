@@ -8,7 +8,7 @@ export const ActivityMergeNodeComponent: SFC<Props> = ({ element }) => (
         .bounds.height / 2}, ${element.bounds.width / 2} ${
         element.bounds.height
       }, 0 ${element.bounds.height / 2}, ${element.bounds.width / 2} 0`}
-      stroke="black"
+      stroke="#ff6633"
     />
     <text
       x="50%"

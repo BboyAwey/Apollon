@@ -50,11 +50,11 @@ export const ActivityControlFlowComponent: SFC<Props> = ({ element }) => {
         markerUnits="strokeWidth"
         strokeDasharray="1,0"
       >
-        <path d="M0,29 L30,15 L0,1" fill="none" stroke="black" />
+        <path d="M0,29 L30,15 L0,1" fill="none" stroke="#ff6633" />
       </marker>
       <polyline
         points={element.path.map(point => `${point.x} ${point.y}`).join(',')}
-        stroke="black"
+        stroke="#ff6633"
         fill="none"
         strokeWidth={1}
         markerEnd={`url(#marker-${element.id})`}

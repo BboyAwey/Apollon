@@ -28,10 +28,10 @@ export class Application extends React.Component<Props> {
           <Theme styles={this.props.styles}>
             <DragLayer>
               <Layout className="apollon-editor">
+                <Sidebar />
                 <Editor>
                   <Canvas />
                 </Editor>
-                <Sidebar />
               </Layout>
             </DragLayer>
           </Theme>
