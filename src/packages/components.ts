@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+// import { FunctionComponent, Component } from 'react';
 import { ActivityActionNodeComponent } from './activity-diagram/activity-action-node/activity-action-node-component';
 import { ActivityControlFlowComponent } from './activity-diagram/activity-control-flow/activity-control-flow-component';
 import { ActivityFinalNodeComponent } from './activity-diagram/activity-final-node/activity-final-node-component';
@@ -24,7 +24,7 @@ import { UseCaseIncludeComponent } from './use-case-diagram/use-case-include/use
 import { UseCaseSystemComponent } from './use-case-diagram/use-case-system/use-case-system-component';
 import { UseCaseComponent } from './use-case-diagram/use-case/use-case-component';
 
-export const Components: { [key in ElementType | RelationshipType]: FunctionComponent<{ element: any }> } = {
+export const Components: { [key in ElementType | RelationshipType]: any} = {
   [ElementType.Diagram]: PackageComponent,
   [ElementType.Package]: PackageComponent,
   [ElementType.Class]: ClassifierComponent,
