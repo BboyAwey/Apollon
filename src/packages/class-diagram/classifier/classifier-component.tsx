@@ -21,7 +21,7 @@ export class ClassifierComponent extends Component {
     if (JSON.stringify(nextProps.element) !== JSON.stringify(this.state.element)) {
       this.state.element = nextProps.element;
     }
-    this.setState(this.state.element);
+    this.setState({children: nextProps.children});
   }
 
   render () {
