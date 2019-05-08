@@ -13,8 +13,7 @@ export class ClassifierComponent extends Component {
   }
 
   shouldComponentUpdate (nextProps: any) {
-    // return JSON.stringify(nextProps) !== JSON.stringify(props);
-    return JSON.stringify(nextProps.element) !== JSON.stringify(this.state.element);
+    return true;
   }
 
   componentWillReceiveProps (nextProps: any) {
