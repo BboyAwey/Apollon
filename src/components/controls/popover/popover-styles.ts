@@ -15,7 +15,7 @@ export const PopoverContainer = styled.div<Props>`
   font-weight: 400;
   width: 600px;
   left: 50%;
-  top: 100px;
+  top: 50px;
   margin-left: -300px;
   letter-spacing: normal;
   line-break: auto;

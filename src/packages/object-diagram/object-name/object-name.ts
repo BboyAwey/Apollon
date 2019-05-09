@@ -33,16 +33,16 @@ export class ObjectName extends Container {
     if ('attributes' in values) {
       delete values.attributes;
     }
-    if ('methods' in values) {
-      delete values.methods;
-    }
+    // if ('methods' in values) {
+    //   delete values.methods;
+    // }
 
     super(values);
   }
 
   render(children: Element[]): Element[] {
     const attributes = children.filter(child => child instanceof ObjectAttribute);
-    const methods = children.filter(child => child instanceof ObjectMethod);
+    // const methods = children.filter(child => child instanceof ObjectMethod);
 
     let y = this.headerHeight;
     for (const attribute of attributes) {
@@ -52,15 +52,15 @@ export class ObjectName extends Container {
       y += attribute.bounds.height;
     }
     this.deviderPosition = y;
-    for (const method of methods) {
-      method.bounds.x = 0;
-      method.bounds.y = y;
-      method.bounds.width = this.bounds.width;
-      y += method.bounds.height;
-    }
+    // for (const method of methods) {
+    //   method.bounds.x = 0;
+    //   method.bounds.y = y;
+    //   method.bounds.width = this.bounds.width;
+    //   y += method.bounds.height;
+    // }
 
     this.bounds.height = y;
-    return [this, ...attributes, ...methods];
+    return [this, ...attributes/*, ...methods*/];
   }
 
   resize(children: Element[]): Element[] {
@@ -81,7 +81,7 @@ export class ObjectName extends Container {
       element: {
         ...base,
         attributes: children.filter(child => child instanceof ObjectAttribute).map(child => child.id),
-        methods: children.filter(child => child instanceof ObjectMethod).map(child => child.id),
+        // methods: children.filter(child => child instanceof ObjectMethod).map(child => child.id),
       },
       children,
     };

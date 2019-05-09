@@ -42,16 +42,16 @@ export abstract class Classifier extends Container {
     if ('attributes' in values) {
       delete values.attributes;
     }
-    if ('methods' in values) {
-      delete values.methods;
-    }
+    // if ('methods' in values) {
+    //   delete values.methods;
+    // }
 
     super(values);
   }
 
   render(children: Element[]): Element[] {
     const attributes = children.filter(child => child instanceof ClassAttribute);
-    let methods = children.filter(child => child instanceof ClassMethod);
+    // let methods = children.filter(child => child instanceof ClassMethod);
 
     let y = this.headerHeight;
     for (const attribute of attributes) {
@@ -62,20 +62,20 @@ export abstract class Classifier extends Container {
     }
     if (!this.isEnumeration) {
       this.deviderPosition = y;
-      for (const method of methods) {
-        method.bounds.x = 0;
-        method.bounds.y = y;
-        method.bounds.width = this.bounds.width;
-        y += method.bounds.height;
-      }
+      // for (const method of methods) {
+      //   method.bounds.x = 0;
+      //   method.bounds.y = y;
+      //   method.bounds.width = this.bounds.width;
+      //   y += method.bounds.height;
+      // }
     } else {
       this.deviderPosition = 0;
-      methods = [];
+      // methods = [];
     }
-    this.ownedElements = [...attributes.map(attribute => attribute.id), ...methods.map(method => method.id)];
+    this.ownedElements = [...attributes.map(attribute => attribute.id)/*, ...methods.map(method => method.id)*/];
 
     this.bounds.height = y;
-    return [this, ...attributes, ...methods];
+    return [this, ...attributes/*, ...methods*/];
   }
 
   resize(children: Element[]): Element[] {
@@ -95,8 +95,8 @@ export abstract class Classifier extends Container {
     return {
       element: {
         ...base,
-        attributes: children.filter(child => child instanceof ClassAttribute).map(child => child.id),
-        methods: children.filter(child => child instanceof ClassMethod).map(child => child.id),
+        attributes: children.filter(child => child instanceof ClassAttribute).map(child => child.id)/*,
+        methods: children.filter(child => child instanceof ClassMethod).map(child => child.id),*/
       },
       children,
     };

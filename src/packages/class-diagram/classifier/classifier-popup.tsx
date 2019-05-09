@@ -60,7 +60,7 @@ class ClassifierComponent extends Component<Props> {
     const { element, getById } = this.props;
     const children = element.ownedElements.map(id => getById(id)).filter(notEmpty);
     const attributes = children.filter(child => child instanceof ClassAttribute);
-    const methods = children.filter(child => child instanceof ClassMethod);
+    // const methods = children.filter(child => child instanceof ClassMethod);
 
     return (
       <div>
@@ -99,7 +99,7 @@ class ClassifierComponent extends Component<Props> {
           ))}
           <Textfield outline={true} value="" onSubmit={this.create(ClassAttribute)} />
         </section>
-        {!element.isEnumeration && (
+        {/* {!element.isEnumeration && (
           <section>
             <Divider />
             <Header>{this.props.translate('popup.methods')}</Header>
@@ -113,7 +113,7 @@ class ClassifierComponent extends Component<Props> {
             ))}
             <Textfield outline={true} value="" onSubmit={this.create(ClassMethod)} />
           </section>
-        )}
+        )} */}
       </div>
     );
   }

@@ -28,7 +28,7 @@ class ObjectNameComponent extends Component<Props> {
     const { element, getById } = this.props;
     const children = element.ownedElements.map(id => getById(id)).filter(notEmpty);
     const attributes = children.filter(child => child instanceof ObjectAttribute);
-    const methods = children.filter(child => child instanceof ObjectMethod);
+    // const methods = children.filter(child => child instanceof ObjectMethod);
 
     return (
       <div>
@@ -53,7 +53,7 @@ class ObjectNameComponent extends Component<Props> {
           ))}
           <Textfield outline={true} value="" onSubmit={this.create(ObjectAttribute)} />
         </section>
-        <section>
+        {/* <section>
           <Divider />
           <Header>{this.props.translate('popup.methods')}</Header>
           {methods.map(method => (
@@ -65,7 +65,7 @@ class ObjectNameComponent extends Component<Props> {
             </Flex>
           ))}
           <Textfield outline={true} value="" onSubmit={this.create(ObjectMethod)} />
-        </section>
+        </section> */}
       </div>
     );
   }

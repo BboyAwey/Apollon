@@ -21,7 +21,7 @@ export enum ClassRelationshipType {
 
 export interface UMLClassifier extends UMLElement {
   attributes: string[];
-  methods: string[];
+  // methods: string[];
 }
 
 export interface UMLClassAssociation extends UMLRelationship {
