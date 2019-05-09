@@ -13,58 +13,68 @@ export const PopoverContainer = styled.div<Props>`
   font-size: ${props => props.theme.font.size}px;
   font-style: normal;
   font-weight: 400;
-  left: 0;
+  width: 600px;
+  left: 50%;
+  top: 100px;
+  margin-left: -300px;
   letter-spacing: normal;
   line-break: auto;
   line-height: 1.5;
-  max-width: 276px;
   position: absolute;
   text-align: left;
   text-align: start;
   text-decoration: none;
   text-transform: none;
   text-shadow: none;
-  top: 0;
   white-space: normal;
   word-break: normal;
   word-spacing: normal;
   word-wrap: break-word;
-  z-index: 1060;
 
   *,
   *:before,
   *:after {
     box-sizing: inherit;
   }
+`;
 
-  ${props => css`
-    transform: translate(${props.position.x}px, ${props.position.y}px);
-    will-change: transform;
-  `}
+// ${props => css`
+//   transform: translate(${props.position.x}px, ${props.position.y}px);
+//   will-change: transform;
+// `}
 
-  ${props =>
-    props.placement === 'top' &&
-    css`
-      margin-bottom: 0.5em;
-    `}
+// ${props =>
+//   props.placement === 'top' &&
+//   css`
+//     margin-bottom: 0.5em;
+//   `}
 
-  ${props =>
-    props.placement === 'right' &&
-    css`
-      margin-left: 0.5em;
-    `}
+// ${props =>
+//   props.placement === 'right' &&
+//   css`
+//     margin-left: 0.5em;
+//   `}
 
-  ${props =>
-    props.placement === 'bottom' &&
-    css`
-      margin-top: 0.5em;
-    `}
+// ${props =>
+//   props.placement === 'bottom' &&
+//   css`
+//     margin-top: 0.5em;
+//   `}
 
-  ${props =>
-    props.placement === 'left' &&
-    css`
-      margin-right: 0.5em;
-    `}
+// ${props =>
+//   props.placement === 'left' &&
+//   css`
+//     margin-right: 0.5em;
+//   `}
+
+export const PopoverMask = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .75);
+  z-index: 1060;
 `;
 
 export const PopoverBody = styled.div`

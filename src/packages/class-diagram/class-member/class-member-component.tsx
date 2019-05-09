@@ -3,7 +3,7 @@ import { ClassMember } from './class-member';
 
 export const ClassMemberComponent: SFC<Props> = ({ element }) => (
   <g>
-    <rect x={1} y={1} width={element.bounds.width - 2} height={element.bounds.height - 2} />
+    <rect x={1} y={1} width={element.bounds.width - 2} height={element.bounds.height - 2} rx="10" ry="10"/>
     <text x={10} y="50%" dominantBaseline="middle">
       {element.name}
     </text>

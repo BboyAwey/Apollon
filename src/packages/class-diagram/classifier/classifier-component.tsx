@@ -62,7 +62,7 @@ export class ClassifierComponent extends Component {
         {children}
         <rect width="100%" height="100%" stroke={color} fill="none" pointerEvents="none" rx="10" ry="10"/>
         {/* { element.headerHeight && <path d={`M 0 ${element.headerHeight} H ${element.bounds.width}`} stroke={color} /> } */}
-        { element.deviderPosition && <path d={`M 0 ${element.deviderPosition} H ${element.bounds.width}`} stroke={color} /> }
+        { (element.deviderPosition < element.bounds.height) ? (element.deviderPosition && <path d={`M 0 ${element.deviderPosition} H ${element.bounds.width}`} stroke={color} />) : '' }
       </g>
     );
   }
